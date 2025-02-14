@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@api/*": ["src/api/*"],
+      "@commons/*": ["src/components/commons/*"],
+      "@redux/*": ["src/redux/*"],
+      "@models/*": ["src/redux/models/*"],
+      "@sagas/*": ["src/redux/sagas/*"],
+      "@store/*": ["src/redux/store/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@pages/*": ["src/components/pages/*"],
+      "@HomePage/*": ["src/components/pages/HomePage/*"],
+      "@EditPage/*": ["src/components/pages/EditPage/*"],
+      "@TestForm/*": ["src/components/pages/EditPage/TestForm/*"]
+    }
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

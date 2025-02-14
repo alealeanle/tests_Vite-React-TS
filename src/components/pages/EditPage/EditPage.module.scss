@@ -1,0 +1,30 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.testTitle {
+  margin-bottom: 40px;
+  font-size: 28px;
+  word-break: break-word;
+
+  @include respondMLarge {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  @include respondMedium {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}
+
+.testBody {
+  flex: 1 1 auto;
+  padding: 20px;
+
+  @include respondMedium {
+    padding: 5px;
+  }
+}

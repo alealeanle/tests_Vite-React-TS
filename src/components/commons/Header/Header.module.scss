@@ -1,0 +1,58 @@
+.header {
+  height: 95px;
+  padding: 25px 0;
+
+  @include respondMedium {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.btn {
+  position: absolute;
+  left: 85vw;
+  grid-area: createBtn;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 45px;
+  padding: 1vh 2vw;
+  font-size: 20px;
+  color: $logoutColor;
+  background-color: rosybrown;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease 0s;
+
+  @include respondXLarge {
+    width: 120px;
+    height: 40px;
+    padding: 7px 30px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+  @include respondLarge {
+    left: 80vw;
+  }
+
+  @include respondMedium {
+    position: relative;
+    left: 0;
+    padding: 1vh 2vw;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  @include respondSmall {
+    width: 80px;
+    height: 25px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

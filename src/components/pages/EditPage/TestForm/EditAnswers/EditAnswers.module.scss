@@ -1,0 +1,247 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.answer {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background-color: inherit;
+  cursor: pointer;
+  transition: transform 0.3s ease 0s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:before {
+    font-size: 22px;
+  }
+}
+
+.input {
+  width: 300px;
+  padding: 5px 10px;
+  border: 1px solid $gray;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease 0s;
+
+  @include respondSmall {
+    width: 70%;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+}
+
+.isRightWrap {
+  position: relative;
+}
+
+.radiobutton {
+  position: absolute;
+  top: 7px;
+  left: 1px;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  cursor: pointer;
+
+  &:checked + .isRight:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid $logoutColor;
+    border-radius: 50%;
+    background-color: $logoutColor;
+  }
+}
+
+.isRight {
+  position: absolute;
+  top: 17%;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0px;
+  user-select: none;
+
+  &:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 2px solid $logoutColor;
+    border-radius: 50%;
+  }
+}
+
+.checkbox {
+  position: absolute;
+  top: 6px;
+  left: 1px;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  cursor: pointer;
+
+  &:checked + .checkboxCheckMark {
+    position: absolute;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 6px;
+      width: 12px;
+      height: 2px;
+      border-radius: 40px;
+      background: $logoutColor;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 3px;
+      width: 6px;
+      height: 2px;
+      border-radius: 40px;
+      background: $logoutColor;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.checkboxFrame {
+  position: absolute;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  border: 2px solid $logoutColor;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 400;
+  color: $btnTextColor;
+  background-color: rosybrown;
+  border-radius: 7px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease 0s,
+    box-shadow 0.3s ease 0s;
+
+  @include respondSmall {
+    font-size: 12px;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+}
+
+.addAnswerBtn {
+  margin-right: 10px;
+}
+
+.deleteQuestionBtn {
+  color: $logoutColor;
+}
+
+.modalBtnsWrap {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  padding: 5px;
+
+  @include respondSmall {
+    gap: 10px;
+  }
+
+  & > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    color: $btnTextColor;
+    background-color: rosybrown;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease 0s;
+
+    @include respondXLarge {
+      width: 120px;
+      height: 40px;
+      padding: 7px 30px;
+      font-size: 18px;
+      border-radius: 12px;
+    }
+
+    @include respondMedium {
+      font-size: 16px;
+      border-radius: 10px;
+    }
+
+    @include respondSmall {
+      width: 100px;
+      height: 35px;
+      padding: 7px 10px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.modalDeleteText {
+  margin-bottom: 30px;
+  font-size: 18px;
+  word-break: break-word;
+
+  @include respondMedium {
+    font-size: 16px;
+  }
+}
+
+.modalDeleteBtn {
+  color: $logoutColor;
+}

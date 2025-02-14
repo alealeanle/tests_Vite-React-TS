@@ -1,0 +1,40 @@
+.root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.signIn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 40px;
+  font-size: 20px;
+  color: $btnTextColor;
+  background-color: #8ab92b;
+  border-radius: 15px;
+  transition: transform 0.3s ease 0s;
+  cursor: pointer;
+
+  @include respondLarge {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+
+  @include respondMedium {
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

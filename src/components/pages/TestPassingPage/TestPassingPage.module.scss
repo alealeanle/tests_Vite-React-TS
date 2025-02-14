@@ -1,0 +1,110 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.body {
+  flex: 1 1 auto;
+  padding: 20px;
+
+  @include respondMedium {
+    padding: 5px;
+  }
+}
+
+.title {
+  margin-bottom: 40px;
+  font-size: 28px;
+  word-break: break-word;
+
+  @include respondLarge {
+    font-size: 24px;
+  }
+
+  @include respondMLarge {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  @include respondMedium {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  @include respondMedium {
+    font-size: 16px;
+  }
+}
+
+.resultText {
+  font-size: 24px;
+  line-height: 122%;
+
+  @include respondLarge {
+    font-size: 20px;
+  }
+
+  @include respondMedium {
+    font-size: 16px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.quantity {
+  white-space: nowrap;
+}
+
+.btnWrap {
+  margin-left: 50px;
+
+  @include respondMedium {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+
+.returnBtn {
+  margin: auto;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+  margin: auto;
+  font-size: 20px;
+  color: $btnTextColor;
+  background-color: rosybrown;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease 0s;
+
+  @include respondXLarge {
+    height: 40px;
+    padding: 7px 30px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+  @include respondMedium {
+    padding: 1vh 2vw;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  @include respondSmall {
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

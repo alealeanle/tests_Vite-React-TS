@@ -1,0 +1,67 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+  position: relative;
+  max-height: 70vh;
+  margin: 100px;
+  padding: 40px;
+  background-color: $bgColor;
+  border-radius: 12px;
+  overflow: auto;
+
+  @include respondMedium {
+    margin: auto 50px;
+    padding: 20px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  @include respondLarge {
+    margin-bottom: 30px;
+  }
+}
+
+.title {
+  font-size: 28px;
+
+  @include respondLarge {
+    font-size: 24px;
+  }
+
+  @include respondMedium {
+    font-size: 18px;
+  }
+
+  @include respondSmall {
+    margin-right: 30px;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 20px;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.children {
+  padding: 10px;
+  overflow: auto;
+}

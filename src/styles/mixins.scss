@@ -1,0 +1,54 @@
+@use 'breakpoints' as *;
+
+@mixin respondXXXLarge {
+  @media (max-width: $xxxlarge) {
+    @content;
+  }
+}
+
+@mixin respondXXLarge {
+  @media (max-width: $xxlarge) {
+    @content;
+  }
+}
+
+@mixin respondXLarge {
+  @media (max-width: $xlarge) {
+    @content;
+  }
+}
+
+@mixin respondLarge {
+  @media (max-width: $large) {
+    @content;
+  }
+}
+
+@mixin respondMLarge {
+  @media (max-width: $mlarge) {
+    @content;
+  }
+}
+
+@mixin respondMedium {
+  @media (max-width: $medium) {
+    @content;
+  }
+}
+
+@mixin respondSmall {
+  @media (max-width: $small) {
+    @content;
+  }
+}
+
+@mixin adaptive-value($property, $startSize, $minSize) {
+  $addSize: $startSize - $minSize;
+  #{$property}: $startSize + px;
+  @media (max-width: #{$maxWidthContainer + px}) {
+    #{$property}: calc(
+      #{$minSize + px} + #{$addSize} *
+        ((100vw - 320px) / #{$maxWidthContainer - 320})
+    );
+  }
+}

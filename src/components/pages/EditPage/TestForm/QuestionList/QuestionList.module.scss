@@ -1,0 +1,57 @@
+.questionList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modalBtnsWrap {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+
+  @include respondSmall {
+    gap: 10px;
+  }
+
+  & > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    color: $btnTextColor;
+    background-color: rosybrown;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease 0s;
+
+    @include respondXLarge {
+      width: 120px;
+      height: 40px;
+      padding: 7px 30px;
+      font-size: 18px;
+      border-radius: 12px;
+    }
+
+    @include respondMedium {
+      padding: 1vh 2vw;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.modalDeleteText {
+  margin-bottom: 30px;
+  font-size: 18px;
+  word-break: break-word;
+}
+
+.modalDeleteBtn {
+  color: $logoutColor;
+}

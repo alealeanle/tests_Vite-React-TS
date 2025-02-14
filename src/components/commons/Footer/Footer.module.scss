@@ -1,0 +1,14 @@
+.footer {
+  padding: 25px 0;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+
+  @include respondLarge {
+    font-size: 15px;
+  }
+
+  @include respondSmall {
+    font-size: 12px;
+  }
+}
